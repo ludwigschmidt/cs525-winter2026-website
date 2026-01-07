@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS525: Training Data for AI - Stanford</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CS525: Training Data for AI &mdash; Stanford &mdash; Winter 2026</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#about">About</a>
+            <a href="#schedule">Schedule</a>
+            <div class="dropdown">
+                <a href="#lectures" class="dropdown-toggle">Lectures ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#lec01">1. Introduction</a>
+                    <a href="#lec02">2. Introduction</a>
+                    <a href="#lec03">3. Image datasets</a>
+                    <a href="#lec04">4. Software tools</a>
+                    <a href="#lec05">5. Image datasets</a>
+                    <a href="#lec06">6. LM pre-training</a>
+                    <a href="#lec07">7. LM pre-training</a>
+                    <a href="#lec08">8. LM post-training</a>
+                    <a href="#lec09">9. LM post-training</a>
+                    <a href="#lec10">10. Data attribution</a>
+                    <a href="#lec11">11. Data attribution</a>
+                    <a href="#lec12">12. Audio, 3D</a>
+                    <a href="#lec13">13. Synthetic data</a>
+                    <a href="#lec14">14. Synthetic data</a>
+                    <a href="#lec15">15. Data security</a>
+                    <a href="#lec16">16. Legal aspects</a>
+                </div>
+            </div>
+            <a href="#project">Project</a>
+            <a href="#grading">Grading</a>
+            <a href="#resources">Resources</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                This graduate seminar explores the critical role of training data in modern AI systems.
+                We examine how datasets are constructed, curated, and used to train state-of-the-art
+                machine learning models, with a focus on reliable generalization through careful data curation.
+            </p>
+            <p>
+                Topics include contemporary image and language datasets, data attribution and influence
+                functions, synthetic data generation, multi-modal data, data security, and legal aspects
+                of training data.
+            </p>
+            <p><strong>Instructor:</strong> <a href="https://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></p>
+            <p><strong>Schedule:</strong> Mon, Wed 1:30 PM - 2:50 PM at <a href="https://campus-map.stanford.edu/?srch=Shriram104">Shriram 104</a></p>
+
+            <h3>Prerequisites</h3>
+            <p>
+                Familiarity with the typical content of a graduate-level machine learning class (e.g., CS 229), including:
+            </p>
+            <ul>
+                <li>Supervised learning</li>
+                <li>Neural networks / deep learning</li>
+                <li>Transformers</li>
+                <li>Language models</li>
+            </ul>
+            <p>
+                In some lectures, more background may be necessary. Students are expected to catch up independently
+                (usually straightforward). Please ask the instructor for pointers to papers if you'd like to read more.
+            </p>
+        </section>
+
+        <section id="schedule">
+            <h2>Schedule</h2>
+            <p>The schedule below is tentative and subject to change. Click on a topic for readings and details.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Topic</th>
+                        <th>Lecturer</th>
+                        <th>Slides</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-href="#lec01">
+                        <td>Jan 5 (M)</td>
+                        <td>Introduction</td>
+                        <td>Ludwig</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec02">
+                        <td>Jan 7 (W)</td>
+                        <td>Introduction</td>
+                        <td>Ludwig</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec03">
+                        <td>Jan 12 (M)</td>
+                        <td>Contemporary image datasets</td>
+                        <td>Ludwig</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec04">
+                        <td>Jan 14 (W)</td>
+                        <td>Software tools for data</td>
+                        <td>Tony Wang</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr class="no-class">
+                        <td>Jan 19 (M)</td>
+                        <td colspan="3">MLK Day - No Class</td>
+                    </tr>
+                    <tr data-href="#lec05">
+                        <td>Jan 21 (W)</td>
+                        <td>Contemporary image datasets</td>
+                        <td>Students</td>
+                        <td></td>
+                    </tr>
+                    <tr data-href="#lec06">
+                        <td>Jan 26 (M)</td>
+                        <td>Data for LMs: pre-training</td>
+                        <td>Vaishaal Shankar</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec07">
+                        <td>Jan 28 (W)</td>
+                        <td>Data for LMs: pre-training</td>
+                        <td>Students</td>
+                        <td></td>
+                    </tr>
+                    <tr data-href="#lec08">
+                        <td>Feb 2 (M)</td>
+                        <td>Data for LMs: post-training</td>
+                        <td>Etash Guha</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec09">
+                        <td>Feb 4 (W)</td>
+                        <td>Data for LMs: post-training</td>
+                        <td>Students</td>
+                        <td></td>
+                    </tr>
+                    <tr data-href="#lec10">
+                        <td>Feb 9 (M)</td>
+                        <td>Data attribution & influence functions</td>
+                        <td>Guest lecturer</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec11">
+                        <td>Feb 11 (W)</td>
+                        <td>Data attribution & influence functions</td>
+                        <td>Students</td>
+                        <td></td>
+                    </tr>
+                    <tr class="no-class">
+                        <td>Feb 16 (M)</td>
+                        <td colspan="3">Presidents' Day - No Class</td>
+                    </tr>
+                    <tr data-href="#lec12">
+                        <td>Feb 18 (W)</td>
+                        <td>More modalities: audio, 3D</td>
+                        <td>Guest lecturer</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec13">
+                        <td>Feb 23 (M)</td>
+                        <td>Synthetic data</td>
+                        <td>Sebastien Bubeck</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec14">
+                        <td>Feb 25 (W)</td>
+                        <td>Synthetic data</td>
+                        <td>Students</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Mar 2 (M)</td>
+                        <td>TBD</td>
+                        <td>TBD</td>
+                        <td></td>
+                    </tr>
+                    <tr data-href="#lec15">
+                        <td>Mar 4 (W)</td>
+                        <td>Data security</td>
+                        <td>Nicholas Carlini</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr data-href="#lec16">
+                        <td>Mar 9 (M)</td>
+                        <td>Legal aspects</td>
+                        <td>Janel Thamkul</td>
+                        <td><a href="#">Slides</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mar 11 (W)</td>
+                        <td>Project presentations</td>
+                        <td>Students</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="lectures">
+            <h2>Lecture Details</h2>
+
+            <div class="lecture" id="lec01">
+                <h3>Lecture 1: Introduction (Jan 5)</h3>
+                <p>Course logistics, motivation: reliable generalization via training data curation.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a> - Description</li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec02">
+                <h3>Lecture 2: Introduction (Jan 7)</h3>
+                <p>History of training sets in ML/AI.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a> - Description</li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec03">
+                <h3>Lecture 3: Contemporary image datasets (Jan 12)</h3>
+                <p>LAION-5B, DataComp, DFN.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">LAION-5B paper</a></li>
+                    <li><a href="#">DataComp paper</a></li>
+                    <li><a href="#">DFN paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec04">
+                <h3>Lecture 4: Software tools for data (Jan 14)</h3>
+                <p>Tools for the course project.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec05">
+                <h3>Lecture 5: Contemporary image datasets - Student presentations (Jan 21)</h3>
+                <p>MetaCLIP, interleaved training data.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">MetaCLIP paper</a></li>
+                    <li><a href="#">Interleaved training data paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec06">
+                <h3>Lecture 6: Data for LMs: pre-training (Jan 26)</h3>
+                <p>DCLM, min-hash dedup, RefinedWeb.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">DCLM paper</a></li>
+                    <li><a href="#">RefinedWeb paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec07">
+                <h3>Lecture 7: Data for LMs: pre-training - Student presentations (Jan 28)</h3>
+                <p>FineWeb, Nemotron, C4.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">FineWeb paper</a></li>
+                    <li><a href="#">Nemotron paper</a></li>
+                    <li><a href="#">C4 paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec08">
+                <h3>Lecture 8: Data for LMs: post-training (Feb 2)</h3>
+                <p>SelfInstruct, Alpaca, OpenHermes, OpenThoughts.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">SelfInstruct paper</a></li>
+                    <li><a href="#">Alpaca paper</a></li>
+                    <li><a href="#">OpenHermes paper</a></li>
+                    <li><a href="#">OpenThoughts paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec09">
+                <h3>Lecture 9: Data for LMs: post-training - Student presentations (Feb 4)</h3>
+                <p>Student-led discussion.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec10">
+                <h3>Lecture 10: Data attribution & influence functions (Feb 9)</h3>
+                <p>Guest lecture on data attribution.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec11">
+                <h3>Lecture 11: Data attribution & influence functions - Student presentations (Feb 11)</h3>
+                <p>Data mixing.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec12">
+                <h3>Lecture 12: More modalities: audio, 3D (Feb 18)</h3>
+                <p>Objaverse(-XL), OLMoASR, OWSM.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Objaverse paper</a></li>
+                    <li><a href="#">Objaverse-XL paper</a></li>
+                    <li><a href="#">OLMoASR paper</a></li>
+                    <li><a href="#">OWSM paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec13">
+                <h3>Lecture 13: Synthetic data (Feb 23)</h3>
+                <p>Phi series.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Phi-1 paper</a></li>
+                    <li><a href="#">Phi-2 paper</a></li>
+                    <li><a href="#">Phi-3 paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec14">
+                <h3>Lecture 14: Synthetic data - Student presentations (Feb 25)</h3>
+                <p>BeyondWeb and more.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">BeyondWeb paper</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec15">
+                <h3>Lecture 15: Data security (Mar 4)</h3>
+                <p>Data poisoning and related attacks.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a></li>
+                </ul>
+            </div>
+
+            <div class="lecture" id="lec16">
+                <h3>Lecture 16: Legal aspects (Mar 9)</h3>
+                <p>Legal considerations for training data.</p>
+                <h4>Papers</h4>
+                <ul>
+                    <li><a href="#">Paper placeholder</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="project">
+            <h2>Course Project</h2>
+            <p>
+                One goal of this class is to learn how to build training sets. Often the best way is learning by doing.
+                The course project will be to <strong>build a training set</strong>. You choose the learning problem
+                the training set is for (e.g., related to your research). Very good projects will be research-level
+                and could become conference papers.
+            </p>
+            <p>
+                <strong>Team work is encouraged!</strong> Up to three people per project.
+            </p>
+
+            <h3>Milestones</h3>
+            <table class="milestones">
+                <thead>
+                    <tr>
+                        <th>Deliverable</th>
+                        <th>Length</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Project proposal</td>
+                        <td>300-500 words</td>
+                        <td>January 21</td>
+                    </tr>
+                    <tr>
+                        <td>Progress report</td>
+                        <td>3 pages</td>
+                        <td>February 11</td>
+                    </tr>
+                    <tr>
+                        <td>Final write-up</td>
+                        <td>5 pages</td>
+                        <td>March 9</td>
+                    </tr>
+                    <tr>
+                        <td>Presentation</td>
+                        <td>10 minutes</td>
+                        <td>March 11</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Proposal Guidelines</h3>
+            <p>Your proposal should include:</p>
+            <ul>
+                <li><strong>Motivation:</strong> What problem are you tackling? What learning task will your dataset support?</li>
+                <li><strong>Data sources:</strong> Where will you get the data? (e.g., web scraping, existing datasets, synthetic generation)</li>
+                <li><strong>Methodology:</strong> How will you curate, filter, or process the data?</li>
+                <li><strong>Evaluation:</strong> How will you assess the quality of your dataset?</li>
+            </ul>
+
+            <h3>Evaluation Criteria</h3>
+            <p>Projects will be evaluated based on:</p>
+            <ul>
+                <li><strong>Technical quality:</strong> Is the methodology sound? Is the dataset well-constructed?</li>
+                <li><strong>Originality:</strong> Does the project explore new territory or address an important gap?</li>
+                <li><strong>Communication:</strong> Is the work clearly presented in the report and presentation?</li>
+            </ul>
+        </section>
+
+        <section id="grading">
+            <h2>Grading</h2>
+            <p>The main component of the grade is the course project. The exact breakdown will be updated soon.</p>
+            <ul>
+                <li><strong>Course project:</strong> Majority of grade (proposal, progress report, final report, presentation)</li>
+                <li><strong>Class participation:</strong> Including paper presentations</li>
+            </ul>
+
+            <h3>Policies</h3>
+            <ul>
+                <li><strong>Late days:</strong> Three late days available (but not for the final project)</li>
+                <li><strong>Submissions:</strong> All assignments submitted via Gradescope</li>
+            </ul>
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+
+            <h3>Software Tools</h3>
+            <ul>
+                <li><a href="#">Tool 1</a> - Description</li>
+                <li><a href="#">Tool 2</a> - Description</li>
+            </ul>
+
+            <h3>Datasets</h3>
+            <ul>
+                <li><a href="https://laion.ai/blog/laion-5b/">LAION-5B</a></li>
+                <li><a href="https://github.com/mlfoundations/datacomp">DataComp</a></li>
+                <li><a href="https://github.com/mlfoundations/dclm">DCLM</a></li>
+            </ul>
+
+            <h3>Related Courses</h3>
+            <ul>
+                <li><a href="#">Related course 1</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>CS525: Training Data for AI | Stanford University | Winter 2026</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('tr[data-href]').forEach(row => {
+            row.addEventListener('click', (e) => {
+                if (e.target.tagName !== 'A') {
+                    window.location.hash = row.dataset.href;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
