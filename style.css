@@ -222,6 +222,30 @@ tr.no-class:hover {
     background: #fef3c7;
 }
 
+tr.separator {
+    background: var(--bg-alt);
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+tr.future {
+    color: var(--text-light);
+}
+
+tr.future:hover {
+    background: var(--bg-alt);
+}
+
+tr.separator td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 2px solid var(--border);
+}
+
+tr.separator:hover {
+    background: var(--bg-alt);
+}
+
 td:first-child {
     white-space: nowrap;
     font-weight: 500;
@@ -260,17 +284,50 @@ table.milestones {
     color: var(--text);
 }
 
+.lecture-links {
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-left: 1rem;
+}
+
 .lecture h4 {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-light);
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+.lecture .markdown h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
+}
+
+.lecture .markdown h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.lecture .markdown > p:first-child {
+    margin-top: 0;
 }
 
 .lecture p {
     margin-bottom: 0.5rem;
     color: var(--text-light);
+}
+
+.lecture .markdown p,
+.lecture .markdown li {
+    color: var(--text);
 }
 
 .lecture ul {
