@@ -325,13 +325,18 @@ table.milestones {
     color: var(--text-light);
 }
 
-.lecture .markdown p,
-.lecture .markdown li {
+.lecture .markdown p {
     color: var(--text);
 }
 
-.lecture ul {
-    margin-bottom: 0;
+.lecture .markdown li {
+    color: var(--text);
+    max-width: 65ch;
+}
+
+.lecture .markdown ul {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
 }
 
 .lecture li {

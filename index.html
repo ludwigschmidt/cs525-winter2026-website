@@ -21,6 +21,7 @@
                 <a href="#lectures" class="dropdown-toggle">Lectures ▾</a>
                 <div class="dropdown-menu">
                     <a href="#lec01">1. Introduction, course logistics, ImageNet</a>
+                    <a href="#lec02">2. Reliable generalization from training data</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -40,6 +41,7 @@
             </p>
             <p><strong>Instructor:</strong> <a href="https://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></p>
             <p><strong>Schedule:</strong> Monday, Wednesday 1:30 PM - 2:50 PM in <a href="https://campus-map.stanford.edu/?srch=Shriram104">Shriram 104</a></p>
+            <p><strong>Office hours:</strong> Wednesday 3:00 - 3:30 PM in <a href="https://campus-map.stanford.edu/?srch=Gates">Gates 341</a> (Ludwig's office)</p>
 
             <p><strong>Prerequisites:</strong> Familiarity with graduate-level machine learning (e.g., CS 229), including supervised learning, deep learning, transformers, and language models.</p>
             <p><strong>Communication:</strong> Course communication happens on the Stanford Slack. Enrolled students can join the course workspace by clicking the Slack link in the Canvas navigation bar and selecting "Join Workspace".</p>
@@ -65,14 +67,14 @@
                         <td>Ludwig Schmidt</td>
                         <td><a href="https://drive.google.com/file/d/1Xk0FgikvJ5f2VGRuXUM2ztaS2GdB69p0/view?usp=sharing">Slides</a></td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec02">
                         <td>Jan 7 (W)</td>
                         <td>Reliable generalization from training data</td>
                         <td>Ludwig Schmidt</td>
-                        <td></td>
+                        <td><a href="https://drive.google.com/file/d/1HjOSpXauXXX96mTtlTFDuz1T7atHlzQF/view?usp=sharing">Slides</a></td>
+                    </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
                         <td>Jan 12 (M)</td>
@@ -196,17 +198,45 @@ Specifically we look at
 - What we can learn from benchmarks like ImageNet, in particular whether they are reliable indicators of progress or suffer from overfitting.
 
 ## Papers
-The original ImageNet papers
+The original ImageNet papers:
 - [ImageNet: A Large-Scale Hierarchical Image Database](https://www.image-net.org/static_files/papers/imagenet_cvpr09.pdf)
 - [ImageNet Large Scale Visual Recognition Challenge](https://arxiv.org/abs/1409.0575)
 
 
-The AlexNet paper made a lot of progress on ImageNet and led to a resurgence of deep learning
+The AlexNet paper made a lot of progress on ImageNet and led to a resurgence of deep learning:
 - [ImageNet Classification with Deep Convolutional Neural Networks](https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf)
 
 
-The ImageNetV2 reproduction of ImageNet to test for overfitting
+The ImageNetV2 reproduction of ImageNet to test for overfitting:
 - [Do ImageNet Classifiers Generalize to ImageNet?](https://arxiv.org/abs/1902.10811)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec02">
+                <h3>Lecture 2: Reliable generalization from training data (Jan 7) <span class="lecture-links"><a href="https://drive.google.com/file/d/1HjOSpXauXXX96mTtlTFDuz1T7atHlzQF/view?usp=sharing">Slides</a></span></h3>
+                <div class="markdown">
+We continue our discussion of the ImageNetV2 experiment mentioned in Lecture 1.
+We find that the cause of the accuracy drop from ImageNet to ImageNetV2 is most likely due to distribution shift, not overfitting from test set re-use.
+Other distribution shift benchmarks such as ObjectNet, ImageNet-Sketch, and ImageNet-R also showed that ImageNet models struggled to generalize reliably under distribution shift.
+
+The CLIP model from OpenAI was a big step forward in terms of reliable generalization on ImageNet and other benchmarks.
+The cause for CLIP's robustness is entirely its improved training data.
+In contrast, earlier approaches based on modifying model architecture or training algorithm failed to achieve meaningful robustness gains on the same benchmarks where CLIP succeeded.
+This highlights the key role data plays in enabling reliable generalization.
+
+The above results focus on ImageNet as a model organism.
+Later work has shown that similar phenomena often also hold for other datasets and learning problems.
+
+## Papers
+The large robustness investigation center on ImageNet comes from the following paper:
+- [Measuring Robustness to Natural Distribution Shifts in Image Classification](https://arxiv.org/abs/2007.00644)
+
+CLIP made large progress in the aforementioned framework for evaluating reliable generalization:
+- [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/abs/2103.00020)
+
+Training data is key to CLIP's reliable generalization behavior:
+- [Data Determines Distributional Robustness in Contrastive Language Image Pre-training (CLIP)](https://arxiv.org/abs/2205.01397)
 
                 </div>
             </div>
@@ -311,10 +341,26 @@ The ImageNetV2 reproduction of ImageNet to test for overfitting
         document.querySelectorAll('tr[data-href]').forEach(row => {
             row.addEventListener('click', (e) => {
                 if (e.target.tagName !== 'A') {
-                    window.location.hash = row.dataset.href;
+                    scrollToHash(row.dataset.href);
                 }
             });
         });
+
+        // Handle anchor links - scroll even if hash is the same
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                scrollToHash(link.getAttribute('href'));
+            });
+        });
+
+        function scrollToHash(hash) {
+            const target = document.querySelector(hash);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                history.pushState(null, null, hash);
+            }
+        }
     </script>
 </body>
 </html>
