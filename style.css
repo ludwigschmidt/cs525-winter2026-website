@@ -109,7 +109,7 @@ nav a:hover {
     border: 1px solid var(--border);
     border-radius: 4px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    min-width: 180px;
+    min-width: 320px;
     z-index: 200;
     padding: 0.5rem 0;
 }
