@@ -22,6 +22,7 @@
                 <div class="dropdown-menu">
                     <a href="#lec01">1. Introduction, course logistics, ImageNet</a>
                     <a href="#lec02">2. Reliable generalization from training data</a>
+                    <a href="#lec03">3. From Highleyman to LAION-5B</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -73,14 +74,14 @@
                         <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></td>
                         <td><a href="https://drive.google.com/file/d/1HjOSpXauXXX96mTtlTFDuz1T7atHlzQF/view?usp=sharing">Slides</a></td>
                     </tr>
+                    <tr data-href="#lec03">
+                        <td>Jan 12 (M)</td>
+                        <td>From Highleyman to LAION-5B</td>
+                        <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></td>
+                        <td><a href="https://drive.google.com/file/d/1PGuIEryRGFiPSzuOnj8W5d3jQfwJJeRN/view?usp=drive_link">Slides</a></td>
+                    </tr>
                     <tr class="separator">
                         <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
-                        <td>Jan 12 (M)</td>
-                        <td>Contemporary image datasets</td>
-                        <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></td>
-                        <td></td>
                     </tr>
                     <tr class="future">
                         <td>Jan 14 (W)</td>
@@ -217,15 +218,15 @@ The ImageNetV2 reproduction of ImageNet to test for overfitting:
                 <h3>Lecture 2: Reliable generalization from training data (Jan 7) <span class="lecture-links"><a href="https://drive.google.com/file/d/1HjOSpXauXXX96mTtlTFDuz1T7atHlzQF/view?usp=sharing">Slides</a></span></h3>
                 <div class="markdown">
 We continue our discussion of the ImageNetV2 experiment mentioned in Lecture 1.
-We find that the cause of the accuracy drop from ImageNet to ImageNetV2 is most likely due to distribution shift, not overfitting from test set re-use.
+We find that the cause of the accuracy drop from ImageNet to ImageNetV2 is due to distribution shift, not overfitting from test set re-use.
 Other distribution shift benchmarks such as ObjectNet, ImageNet-Sketch, and ImageNet-R also showed that ImageNet models struggled to generalize reliably under distribution shift.
 
-The CLIP model from OpenAI was a big step forward in terms of reliable generalization on ImageNet and other benchmarks.
-The cause for CLIP's robustness is entirely its improved training data.
+The CLIP model from OpenAI was a big step forward in terms of reliable generalization on ImageNet and related benchmarks.
+The cause for CLIP's robustness is its improved training data.
 In contrast, earlier approaches based on modifying model architecture or training algorithm failed to achieve meaningful robustness gains on the same benchmarks where CLIP succeeded.
 This highlights the key role data plays in enabling reliable generalization.
 
-The above results focus on ImageNet as a model organism.
+The above results focus on ImageNet as a "model organism".
 Later work has shown that similar phenomena often also hold for other datasets and learning problems.
 
 ## Papers
@@ -237,6 +238,28 @@ CLIP made large progress in the aforementioned framework for evaluating reliable
 
 Training data is key to CLIP's reliable generalization behavior:
 - [Data Determines Distributional Robustness in Contrastive Language Image Pre-training (CLIP)](https://arxiv.org/abs/2205.01397)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec03">
+                <h3>Lecture 3: From Highleyman to LAION-5B (Jan 12) <span class="lecture-links"><a href="https://drive.google.com/file/d/1PGuIEryRGFiPSzuOnj8W5d3jQfwJJeRN/view?usp=drive_link">Slides</a></span></h3>
+                <div class="markdown">
+We continue the series of experiments to pinpoint the cause of CLIP's robustness gains.
+This finishes our tour through the ImageNet line of work which highlighted the importance of data both for guiding progress in machine learning and training models that generalize reliably.
+
+Next we go through a brief history of training data for AI / ML from the 1950s (Perceptron & Highleyman's data) to the current time.
+
+Finally we start discussing contemporary training sets for multimodal models with the LAION-5B paper.
+
+## Papers / book chapters
+As in Lecture 2, the experiments to determine the cause of CLIP's robustness are from the following paper:
+- [Data Determines Distributional Robustness in Contrastive Language Image Pre-training (CLIP)](https://arxiv.org/abs/2205.01397)
+
+The history of datasets is based on [Chapter 8](https://mlstory.org/data.html) from the book "Patterns, Predictions, and Actions" by Moritz Hardt and Ben Recht.
+
+The LAION-5B dataset is described in the corresponding paper:
+- [LAION-5B: An open large-scale dataset for training next generation image-text models](https://arxiv.org/abs/2210.08402)
 
                 </div>
             </div>
