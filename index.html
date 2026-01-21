@@ -23,6 +23,7 @@
                     <a href="#lec01">1. Introduction, course logistics, ImageNet</a>
                     <a href="#lec02">2. Reliable generalization from training data</a>
                     <a href="#lec03">3. From Highleyman to LAION-5B</a>
+                    <a href="#lec04">4. Software tools for large-scale data</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -82,23 +83,23 @@
                         <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig Schmidt</a></td>
                         <td><a href="https://drive.google.com/file/d/1PGuIEryRGFiPSzuOnj8W5d3jQfwJJeRN/view?usp=drive_link">Slides</a></td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec04">
                         <td>Jan 14 (W)</td>
                         <td>Software tools for large-scale data</td>
                         <td><a href="https://www.linkedin.com/in/tony-wang-77678b14a/">Tony Wang</a></td>
-                        <td></td>
+                        <td>coming soon</td>
                     </tr>
                     <tr class="no-class">
                         <td>Jan 19 (M)</td>
                         <td colspan="3">MLK Day - No Class</td>
                     </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
+                    </tr>
                     <tr class="future">
                         <td>Jan 21 (W)</td>
                         <td>Contemporary image datasets</td>
-                        <td><a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
+                        <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
                         <td></td>
                     </tr>
                     <tr class="future">
@@ -266,6 +267,16 @@ The LAION-5B dataset is described in the corresponding paper:
                 </div>
             </div>
 
+            <div class="lecture" id="lec04">
+                <h3>Lecture 4: Software tools for large-scale data (Jan 14) <span class="lecture-links">Guest lecture by <a href="https://www.linkedin.com/in/tony-wang-77678b14a/">Tony Wang</a></span></h3>
+                <div class="markdown">
+Tony covered data processing fundamentals for large-scale machine learning workflows, including [Parquet](https://parquet.apache.org/) files, [S3](https://aws.amazon.com/s3/), [Spark](https://spark.apache.org/), [Iceberg](https://iceberg.apache.org/), and [Pola.rs](https://pola.rs/), and how these tools fit together in modern data pipelines.
+
+Slides coming soon.
+
+                </div>
+            </div>
+
             <!-- Future lectures: copy the template above and update the id, title, and content -->
         </section>
 
@@ -333,11 +344,17 @@ The LAION-5B dataset is described in the corresponding paper:
 
         <section id="grading">
             <h2>Grading</h2>
-            <p>The main component of the grade is the course project. The exact breakdown will be updated soon once we know if we will
-                have a TA for the class and hence do a problem set.</p>
+            <p>The course grade is determined as follows:</p>
             <ul>
-                <li><strong>Course project:</strong> Majority of grade (project proposal, progress report, final report, presentation)</li>
-                <li><strong>Class participation:</strong> Paper presentations (<a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">sign up for slots</a>)</li>
+                <li><strong>Course project (90%):</strong>
+                    <ul>
+                        <li>Project proposal: 10%</li>
+                        <li>Progress report: 10%</li>
+                        <li>Final write-up: 50%</li>
+                        <li>Presentation: 20%</li>
+                    </ul>
+                </li>
+                <li><strong>Paper presentations (10%):</strong> In-class presentations (<a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">sign up for slots</a>)</li>
             </ul>
 
             <h3>Policies</h3>
