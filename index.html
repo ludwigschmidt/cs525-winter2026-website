@@ -24,6 +24,7 @@
                     <a href="#lec02">2. Reliable generalization from training data</a>
                     <a href="#lec03">3. From Highleyman to LAION-5B</a>
                     <a href="#lec04">4. Software tools for large-scale data</a>
+                    <a href="#lec05">5. Contemporary image datasets</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -87,20 +88,20 @@
                         <td>Jan 14 (W)</td>
                         <td>Software tools for large-scale data</td>
                         <td><a href="https://www.linkedin.com/in/tony-wang-77678b14a/">Tony Wang</a></td>
-                        <td>coming soon</td>
+                        <td><a href="https://drive.google.com/file/d/1syk1sbgxvhVsNfCd-GCcdWL6GX6WQXdw/view?usp=sharing">Slides</a></td>
                     </tr>
                     <tr class="no-class">
                         <td>Jan 19 (M)</td>
                         <td colspan="3">MLK Day - No Class</td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec05">
                         <td>Jan 21 (W)</td>
                         <td>Contemporary image datasets</td>
                         <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
-                        <td></td>
+                        <td>Slides <a href="https://drive.google.com/file/d/13waW-ib6wFniywsqhM6oOUYOT7Ch1YPB/view?usp=sharing">1</a>, <a href="https://drive.google.com/file/d/1wN0aESd-JGmbaKjoxzMPo_0KL3Ouk_bY/view?usp=drive_link">2</a>, <a href="https://drive.google.com/file/d/1RlCV91Vh7Imav7kv8kexh3Thy41pwbjC/view?usp=drive_link">3</a>, <a href="https://drive.google.com/file/d/1XzwZrjQjpHsen_w4ifWPoWqGP9ri48Zd/view?usp=drive_link">4</a></td>
+                    </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
                         <td>Jan 26 (M)</td>
@@ -129,7 +130,7 @@
                     <tr class="future">
                         <td>Feb 9 (M)</td>
                         <td>Data attribution & influence functions</td>
-                        <td>Guest lecturer</td>
+                        <td><a href="https://www.juhanbae.com/">Juhan Bae</a></td>
                         <td></td>
                     </tr>
                     <tr class="future">
@@ -268,11 +269,33 @@ The LAION-5B dataset is described in the corresponding paper:
             </div>
 
             <div class="lecture" id="lec04">
-                <h3>Lecture 4: Software tools for large-scale data (Jan 14) <span class="lecture-links">Guest lecture by <a href="https://www.linkedin.com/in/tony-wang-77678b14a/">Tony Wang</a></span></h3>
+                <h3>Lecture 4: Software tools for large-scale data (Jan 14) <span class="lecture-links"><a href="https://drive.google.com/file/d/1syk1sbgxvhVsNfCd-GCcdWL6GX6WQXdw/view?usp=sharing">Slides</a> · Guest lecture by <a href="https://www.linkedin.com/in/tony-wang-77678b14a/">Tony Wang</a></span></h3>
                 <div class="markdown">
 Tony covered data processing fundamentals for large-scale machine learning workflows, including [Parquet](https://parquet.apache.org/) files, [S3](https://aws.amazon.com/s3/), [Spark](https://spark.apache.org/), [Iceberg](https://iceberg.apache.org/), and [Pola.rs](https://pola.rs/), and how these tools fit together in modern data pipelines.
 
-Slides coming soon.
+## Resources
+- [Notes on setting up an AWS EMR cluster](https://drive.google.com/file/d/1Da-rmbWS8G0mbNar8hpYxQmj_JehDdOc/view?usp=sharing)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec05">
+                <h3>Lecture 5: Contemporary image datasets (Jan 21) <span class="lecture-links"><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></span></h3>
+                <div class="markdown">
+Ludwig started the lecture by covering [DataComp](https://arxiv.org/abs/2304.14108), a benchmark for studying CLIP training data ([slides](https://drive.google.com/file/d/13waW-ib6wFniywsqhM6oOUYOT7Ch1YPB/view?usp=sharing)). After that we had our first round of student paper presentations.
+
+## Student presentations
+
+**CLIP training data** (Ayush Agrawal, [slides](https://drive.google.com/file/d/1wN0aESd-JGmbaKjoxzMPo_0KL3Ouk_bY/view?usp=drive_link)):
+- [MetaCLIP: Demystifying CLIP Data](https://arxiv.org/abs/2309.16671)
+
+**Interleaved training data** (James Cheng, [slides](https://drive.google.com/file/d/1RlCV91Vh7Imav7kv8kexh3Thy41pwbjC/view?usp=drive_link)):
+- [OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](https://arxiv.org/abs/2306.16527)
+- [MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training](https://arxiv.org/abs/2403.09611)
+
+**Some good methods on DataComp** (Shlok Natarajan, [slides](https://drive.google.com/file/d/1XzwZrjQjpHsen_w4ifWPoWqGP9ri48Zd/view?usp=drive_link)):
+- [FLYT: Fast Filtering for High-Quality Web-Scale Image-Text Datasets](https://arxiv.org/abs/2503.08805)
+- [T-MARS: Improving Visual Representations by Circumventing Text Feature Learning](https://arxiv.org/abs/2307.03132)
 
                 </div>
             </div>
