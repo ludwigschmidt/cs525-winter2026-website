@@ -25,6 +25,8 @@
                     <a href="#lec03">3. From Highleyman to LAION-5B</a>
                     <a href="#lec04">4. Software tools for large-scale data</a>
                     <a href="#lec05">5. Contemporary image datasets</a>
+                    <a href="#lec06">6. Data for LMs: pre-training</a>
+                    <a href="#lec07">7. Data for LMs: pre-training (student presentations)</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -100,20 +102,20 @@
                         <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
                         <td>Slides <a href="https://drive.google.com/file/d/13waW-ib6wFniywsqhM6oOUYOT7Ch1YPB/view?usp=sharing">1</a>, <a href="https://drive.google.com/file/d/1wN0aESd-JGmbaKjoxzMPo_0KL3Ouk_bY/view?usp=drive_link">2</a>, <a href="https://drive.google.com/file/d/1RlCV91Vh7Imav7kv8kexh3Thy41pwbjC/view?usp=drive_link">3</a>, <a href="https://drive.google.com/file/d/1XzwZrjQjpHsen_w4ifWPoWqGP9ri48Zd/view?usp=drive_link">4</a></td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec06">
                         <td>Jan 26 (M)</td>
                         <td>Data for LMs: pre-training</td>
                         <td><a href="https://www.linkedin.com/in/vaishaal/">Vaishaal Shankar</a></td>
-                        <td></td>
+                        <td><a href="https://dclmlecture.netlify.app/">Slides</a></td>
                     </tr>
-                    <tr class="future">
+                    <tr data-href="#lec07">
                         <td>Jan 28 (W)</td>
                         <td>Data for LMs: pre-training</td>
-                        <td><a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
-                        <td></td>
+                        <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
+                        <td>Slides <a href="https://drive.google.com/file/d/1mj6M1qTXiwCiT0t1HIgBQHF0brSyO8iy/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/10fseBAijnhyNM68eXImE3Y8k0St0Xlg5/view?usp=drive_link">2</a></td>
+                    </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
                         <td>Feb 2 (M)</td>
@@ -151,20 +153,20 @@
                     </tr>
                     <tr class="future">
                         <td>Feb 23 (M)</td>
-                        <td>Synthetic data</td>
+                        <td>TBD</td>
                         <td>TBD</td>
                         <td></td>
                     </tr>
                     <tr class="future">
                         <td>Feb 25 (W)</td>
                         <td>Synthetic data</td>
-                        <td><a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
+                        <td><a href="https://zitongyang.github.io/">Zitong Yang</a></td>
                         <td></td>
                     </tr>
                     <tr class="future">
                         <td>Mar 2 (M)</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
+                        <td>Synthetic data</td>
+                        <td><a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
                         <td></td>
                     </tr>
                     <tr class="future">
@@ -296,6 +298,59 @@ Ludwig started the lecture by covering [DataComp](https://arxiv.org/abs/2304.141
 **Some good methods on DataComp** (Shlok Natarajan, [slides](https://drive.google.com/file/d/1XzwZrjQjpHsen_w4ifWPoWqGP9ri48Zd/view?usp=drive_link)):
 - [FLYT: Fast Filtering for High-Quality Web-Scale Image-Text Datasets](https://arxiv.org/abs/2503.08805)
 - [T-MARS: Improving Visual Representations by Circumventing Text Feature Learning](https://arxiv.org/abs/2307.03132)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec06">
+                <h3>Lecture 6: Data for LMs: pre-training (Jan 26) <span class="lecture-links"><a href="https://dclmlecture.netlify.app/">Slides</a> · Guest lecture by <a href="https://www.linkedin.com/in/vaishaal/">Vaishaal Shankar</a></span></h3>
+                <div class="markdown">
+Vaishaal presented a deep dive into DCLM (DataComp for Language Models), a benchmark and open dataset for studying language model pre-training data. The lecture covered:
+- The data problem: why LMs need vast amounts of training data and scaling laws
+- Dataset evaluation methodology: controlled experiments across scales (412M to 7B parameters)
+- The DCLM-Baseline pipeline: text extraction, heuristic filtering, deduplication, model-based filtering, decontamination
+- Defining data quality: human judgment experiments (71% annotator agreement) and the surprising finding that methods disagreeing with humans can produce better downstream performance
+- Results: DCLM-Baseline achieves 64% MMLU with 7B parameters using 6.6x less compute than comparable models
+
+## Papers
+- [DataComp-LM: In search of the next generation of training sets for language models](https://arxiv.org/abs/2406.11794)
+- [RefinedWeb: The Falcon RefinedWeb Dataset for English Massive Web-Only Pretraining](https://arxiv.org/abs/2306.01116)
+- [Training Compute-Optimal Large Language Models (Chinchilla)](https://arxiv.org/abs/2203.15556)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec07">
+                <h3>Lecture 7: Data for LMs: pre-training - Student Presentations (Jan 28) <span class="lecture-links"><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></span></h3>
+                <div class="markdown">
+This lecture featured student presentations on LLM pre-training data, followed by an overview of training data used in open-weight language models.
+
+## Student presentations
+
+**FineWeb** (Animesh Jha):
+- [The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale](https://arxiv.org/abs/2406.17557)
+
+**Nemotron-CC** (Nick Jiang):
+- [Nemotron-CC: Transforming Common Crawl into a Refined Long-Horizon Pretraining Dataset](https://arxiv.org/abs/2412.02595)
+
+**Scaling data-constrained language models** (Niklas Muennighoff, [slides](https://drive.google.com/file/d/1mj6M1qTXiwCiT0t1HIgBQHF0brSyO8iy/view?usp=drive_link)):
+- [Scaling Data-Constrained Language Models](https://arxiv.org/abs/2305.16264)
+
+**Scaling laws for data filtering** (Rohan Sinha):
+- [Scaling Laws for Data Filtering — Data Curation cannot be Compute Agnostic](https://arxiv.org/abs/2404.07177)
+
+## Instructor overview
+
+Ludwig gave an overview of what's known about training data for open-weight / open-data language models ([slides](https://drive.google.com/file/d/10fseBAijnhyNM68eXImE3Y8k0St0Xlg5/view?usp=drive_link)), covering:
+- OLMo [1](https://arxiv.org/abs/2402.01032), [2](https://arxiv.org/abs/2411.15466), [3](https://arxiv.org/abs/2501.14734)
+- [Marin](https://marin.readthedocs.io/en/latest/reports/marin-8b-retro/)
+- Llama [1](https://arxiv.org/abs/2302.13971), [2](https://arxiv.org/abs/2307.09288), [3](https://arxiv.org/abs/2407.21783)
+- Qwen [1](https://arxiv.org/abs/2309.16609), [2](https://arxiv.org/abs/2407.10671), [2.5](https://arxiv.org/abs/2412.15115), [3](https://arxiv.org/abs/2505.09388)
+- DeepSeek [V1](https://arxiv.org/abs/2401.02954), [V2](https://arxiv.org/abs/2405.04434), [V3](https://arxiv.org/abs/2412.19437), [R1](https://arxiv.org/abs/2501.12948)
+- Gemma [1](https://arxiv.org/abs/2403.08295), [2](https://arxiv.org/abs/2408.00118), [3](https://arxiv.org/abs/2503.19786)
+- GLM [130B](https://arxiv.org/abs/2210.02414), [4](https://arxiv.org/abs/2406.12793)
+- [MiniMax-01](https://arxiv.org/abs/2501.08313)
+- [MiMo-V2-Flash](https://arxiv.org/abs/2501.02780)
 
                 </div>
             </div>
