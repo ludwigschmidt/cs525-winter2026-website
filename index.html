@@ -27,6 +27,7 @@
                     <a href="#lec05">5. Contemporary image datasets</a>
                     <a href="#lec06">6. Data for LMs: pre-training</a>
                     <a href="#lec07">7. Data for LMs: pre-training (student presentations)</a>
+                    <a href="#lec08">8. Data for LMs: post-training</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -114,14 +115,14 @@
                         <td><a href="https://people.csail.mit.edu/ludwigs/">Ludwig</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
                         <td>Slides <a href="https://drive.google.com/file/d/1WIxHhWKEkFPsO33f23G4RpP22AzCPoRR/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/1mj6M1qTXiwCiT0t1HIgBQHF0brSyO8iy/view?usp=drive_link">2</a>, <a href="https://drive.google.com/file/d/10fseBAijnhyNM68eXImE3Y8k0St0Xlg5/view?usp=drive_link">3</a></td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec08">
                         <td>Feb 2 (M)</td>
                         <td>Data for LMs: post-training</td>
                         <td><a href="https://www.linkedin.com/in/etash-guha-00097116a/">Etash Guha</a></td>
-                        <td></td>
+                        <td><a href="https://drive.google.com/file/d/1YjVrcdvDAsSGNGnD-PRZPYCTt4IWWqAq/view?usp=drive_link">Slides</a></td>
+                    </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
                         <td>Feb 4 (W)</td>
@@ -153,8 +154,8 @@
                     </tr>
                     <tr class="future">
                         <td>Feb 23 (M)</td>
-                        <td>TBD</td>
-                        <td>TBD</td>
+                        <td>Training data for AI in biology</td>
+                        <td><a href="https://www.linkedin.com/in/cade-gordon/">Cade Gordon</a> & <a href="https://www.linkedin.com/in/jonah-kallenbach/">Jonah Kallenbach</a></td>
                         <td></td>
                     </tr>
                     <tr class="future">
@@ -349,6 +350,31 @@ Ludwig gave an overview of what's known about training data for open-weight / op
 - GLM [130B](https://arxiv.org/abs/2210.02414), [4](https://arxiv.org/abs/2406.12793)
 - [MiniMax-01](https://arxiv.org/abs/2501.08313)
 - [MiMo-V2-Flash](https://arxiv.org/abs/2501.02780)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec08">
+                <h3>Lecture 8: Data for LMs: post-training (Feb 2) <span class="lecture-links"><a href="https://drive.google.com/file/d/1YjVrcdvDAsSGNGnD-PRZPYCTt4IWWqAq/view?usp=drive_link">Slides</a> · <a href="https://www.linkedin.com/in/etash-guha-00097116a/">Etash Guha</a></span></h3>
+                <div class="markdown">
+Etash covered the landscape of post-training data for language models. The lecture covered:
+- Instruction tuning: FLAN and the emergence of instruction-following capabilities
+- Reinforcement Learning from Human Feedback (RLHF): InstructGPT and Constitutional AI
+- Synthetic data generation: Self-Instruct, Alpaca, and UltraFeedback
+- Reasoning and test-time compute: DeepSeek-R1, s1, and OpenThoughts
+- Code and agentic data: SWE-Gym for software engineering tasks
+
+## Papers
+- [Finetuned Language Models Are Zero-Shot Learners (FLAN)](https://arxiv.org/abs/2109.01652)
+- [Training language models to follow instructions with human feedback (InstructGPT)](https://arxiv.org/abs/2203.02155)
+- [Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)
+- [Self-Instruct: Aligning Language Models with Self-Generated Instructions](https://arxiv.org/abs/2212.10560)
+- [Alpaca: A Strong, Replicable Instruction-Following Model](https://crfm.stanford.edu/2023/03/13/alpaca.html)
+- [UltraFeedback: Boosting Language Models with High-quality Feedback](https://arxiv.org/abs/2310.01377)
+- [DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning](https://arxiv.org/abs/2501.12948)
+- [s1: Simple test-time scaling](https://arxiv.org/abs/2501.19393)
+- [OpenThoughts: Data Recipes for Reasoning Models](https://arxiv.org/abs/2506.04178)
+- [SWE-Gym: Training Software Engineering Agents and Verifiers with Open Source](https://arxiv.org/abs/2412.21139)
 
                 </div>
             </div>
