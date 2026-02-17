@@ -213,17 +213,17 @@ tbody tr[data-href]:hover {
 }
 
 tr.no-class {
-    background: #fef3c7;
+    background: var(--bg-alt);
     color: var(--text-light);
     font-style: italic;
 }
 
 tr.no-class:hover {
-    background: #fef3c7;
+    background: var(--bg-alt);
 }
 
 tr.separator {
-    background: var(--bg-alt);
+    background: #dbeafe;
     font-weight: 500;
     font-size: 0.85rem;
     color: var(--text-light);
