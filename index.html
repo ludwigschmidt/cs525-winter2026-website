@@ -32,6 +32,8 @@
                     <a href="#lec10">10. Data attribution & influence functions</a>
                     <a href="#lec11">11. Training data for robotics</a>
                     <a href="#lec12">12. 3D data + student presentations</a>
+                    <a href="#lec13">13. Training data for AI in biology</a>
+                    <a href="#lec14">14. Synthetic data</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -153,24 +155,24 @@
                         <td><a href="https://mattdeitke.com/">Matt Deitke</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
                         <td>Slides <a href="https://drive.google.com/file/d/1D9hHJGslTg6UfBygwypjZl-32-OZJZB5/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/1WP4yxD6tqFYoyXEj11RmNxiPth_bHhad/view?usp=drive_link">2</a>, <a href="https://drive.google.com/file/d/1lB4YHZxBCmS4w7UM61KXVcyWkHgILZUa/view?usp=drive_link">3</a>, <a href="https://drive.google.com/file/d/1qO46YDpFtnRIAKJQsW-O4T-j8-mHK2GF/view?usp=drive_link">4</a></td>
                     </tr>
+                    <tr data-href="#lec13">
+                        <td>Feb 23 (M)</td>
+                        <td>Training data for AI in biology</td>
+                        <td><a href="https://www.linkedin.com/in/cade-gordon/">Cade Gordon</a> & <a href="https://www.linkedin.com/in/jonah-kallenbach/">Jonah Kallenbach</a></td>
+                        <td>Slides <a href="https://drive.google.com/file/d/1RoRlPcb6LBeZafa9lDrfDUA9VD-nsVez/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/1p0r1rj4hmiY5uL2k3YsmN4sj_iTM1gL2/view?usp=drive_link">2</a> (<a href="https://jmkbiolecture.netlify.app">HTML</a>)</td>
+                    </tr>
+                    <tr data-href="#lec14">
+                        <td>Feb 25 (W)</td>
+                        <td>Synthetic data</td>
+                        <td><a href="https://zitongyang.github.io/">Zitong Yang</a></td>
+                        <td><a href="https://drive.google.com/file/d/16v0XccWlsQn-nV_dIG_vIYr-f1mq8Sj9/view?usp=drive_link">Slides</a></td>
+                    </tr>
                     <tr class="separator">
                         <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
-                        <td>Feb 23 (M)</td>
-                        <td>Training data for AI in biology</td>
-                        <td><a href="https://www.linkedin.com/in/cade-gordon/">Cade Gordon</a> & <a href="https://www.linkedin.com/in/jonah-kallenbach/">Jonah Kallenbach</a></td>
-                        <td></td>
-                    </tr>
-                    <tr class="future">
-                        <td>Feb 25 (W)</td>
-                        <td>Synthetic data</td>
-                        <td><a href="https://zitongyang.github.io/">Zitong Yang</a></td>
-                        <td></td>
-                    </tr>
-                    <tr class="future">
                         <td>Mar 2 (M)</td>
-                        <td>Data security</td>
+                        <td>Privacy and data poisoning</td>
                         <td><a href="https://nicholas.carlini.com/">Nicholas Carlini</a></td>
                         <td></td>
                     </tr>
@@ -476,6 +478,43 @@ Matt Deitke gave a guest lecture on training data for 3D, followed by student pr
 
 **Metagradients** (James Cheng, [slides](https://drive.google.com/file/d/1qO46YDpFtnRIAKJQsW-O4T-j8-mHK2GF/view?usp=drive_link)):
 - [Metagradients for Efficient Data Attribution](https://arxiv.org/abs/2503.13751)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec13">
+                <h3>Lecture 13: Training data for AI in biology (Feb 23) <span class="lecture-links">Slides <a href="https://drive.google.com/file/d/1RoRlPcb6LBeZafa9lDrfDUA9VD-nsVez/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/1p0r1rj4hmiY5uL2k3YsmN4sj_iTM1gL2/view?usp=drive_link">2</a> (<a href="https://jmkbiolecture.netlify.app">HTML</a>) · Guest lecture by <a href="https://www.linkedin.com/in/cade-gordon/">Cade Gordon</a> & <a href="https://www.linkedin.com/in/jonah-kallenbach/">Jonah Kallenbach</a></span></h3>
+                <div class="markdown">
+Cade and Jonah gave a two-part guest lecture on training data for AI in biology.
+
+**Protein structure** (Cade): Covered the Protein Data Bank (PDB) as a foundational dataset, CASP as a prospective evaluation benchmark, and the impact of data quality on protein structure prediction.
+
+**Small molecules** (Jonah, [HTML slides](https://jmkbiolecture.netlify.app)): Covered molecular representations (SMILES, fingerprints, graphs), challenges in binding prediction including noisy labels and positivity bias, and the central finding that data quality matters more than architectural complexity.
+
+## Papers (Cade)
+- [Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences](https://www.biorxiv.org/content/10.1101/622803v4)
+- [Evolutionary-scale prediction of atomic-level protein structure with a language model](https://www.science.org/doi/10.1126/science.ade2574)
+- [Sequence modeling and design from molecular to genome scale with Evo](https://www.biorxiv.org/content/10.1101/2024.02.27.582234v1)
+- [Simulating 500 million years of evolution with a language model](https://www.biorxiv.org/content/10.1101/2024.07.01.600583v1)
+- [Genome modeling and design across all domains of life with Evo 2](https://www.biorxiv.org/content/10.1101/2025.02.18.638918v1)
+
+## Papers (Jonah)
+- [Highly accurate protein structure prediction with AlphaFold](https://www.nature.com/articles/s41586-021-03819-2)
+- [De novo design of protein structure and function with RFdiffusion](https://www.nature.com/articles/s41586-023-06415-8)
+- [Accurate structure prediction of biomolecular interactions with AlphaFold 3](https://www.nature.com/articles/s41586-024-07487-w)
+- [Boltz-2: Towards Accurate and Efficient Binding Affinity Prediction](https://www.biorxiv.org/content/10.1101/2025.06.14.659707v1)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec14">
+                <h3>Lecture 14: Synthetic data (Feb 25) <span class="lecture-links"><a href="https://drive.google.com/file/d/16v0XccWlsQn-nV_dIG_vIYr-f1mq8Sj9/view?usp=drive_link">Slides</a> · Guest lecture by <a href="https://zitongyang.github.io/">Zitong Yang</a></span></h3>
+                <div class="markdown">
+Zitong gave a guest lecture on synthetic data for training machine learning models, covering the motivations, methods, and limitations of using model-generated data for training.
+
+## Papers
+- [Synthetic continued pretraining](https://arxiv.org/abs/2409.07431)
+- [Synthetic bootstrapped pretraining](https://arxiv.org/abs/2509.15248)
 
                 </div>
             </div>
