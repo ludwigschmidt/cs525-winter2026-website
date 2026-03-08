@@ -34,6 +34,7 @@
                     <a href="#lec12">12. 3D data + student presentations</a>
                     <a href="#lec13">13. Training data for AI in biology</a>
                     <a href="#lec14">14. Synthetic data</a>
+                    <a href="#lec15">15. Privacy and data poisoning</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -167,14 +168,14 @@
                         <td><a href="https://zitongyang.github.io/">Zitong Yang</a></td>
                         <td><a href="https://drive.google.com/file/d/16v0XccWlsQn-nV_dIG_vIYr-f1mq8Sj9/view?usp=drive_link">Slides</a></td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec15">
                         <td>Mar 2 (M)</td>
                         <td>Privacy and data poisoning</td>
                         <td><a href="https://nicholas.carlini.com/">Nicholas Carlini</a></td>
-                        <td></td>
+                        <td><a href="https://drive.google.com/file/d/1tHaW4E0NiCPF9p0f-hOs13EprxagxxRm/view?usp=drive_link">Slides</a></td>
+                    </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
                         <td>Mar 4 (W)</td>
@@ -515,6 +516,24 @@ Zitong gave a guest lecture on synthetic data for training language models, cove
 ## Papers
 - [Synthetic continued pretraining](https://arxiv.org/abs/2409.07431)
 - [Synthetic bootstrapped pretraining](https://arxiv.org/abs/2509.15248)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec15">
+                <h3>Lecture 15: Privacy and data poisoning (Mar 2) <span class="lecture-links"><a href="https://drive.google.com/file/d/1tHaW4E0NiCPF9p0f-hOs13EprxagxxRm/view?usp=drive_link">Slides</a> · Guest lecture by <a href="https://nicholas.carlini.com/">Nicholas Carlini</a></span></h3>
+                <div class="markdown">
+Nicholas gave a guest lecture on privacy and security aspects of training data. The lecture covered:
+- Data poisoning: modifying training data to cause targeted test errors
+- Membership inference and training data extraction: determining whether a specific example was in the training set and recovering training data from models
+
+## Papers
+- [Poisoning Attacks against Support Vector Machines](https://arxiv.org/abs/1206.6389)
+- [Poisoning Web-Scale Training Datasets is Practical](https://arxiv.org/abs/2302.10149)
+- [What Neural Networks Memorize and Why: Discovering the Long Tail via Influence Estimation](https://arxiv.org/abs/2008.03703)
+- [Extracting Training Data from Diffusion Models](https://arxiv.org/abs/2301.13188)
+- [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)
+- [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)
 
                 </div>
             </div>
