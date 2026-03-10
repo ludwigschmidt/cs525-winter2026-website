@@ -35,6 +35,8 @@
                     <a href="#lec13">13. Training data for AI in biology</a>
                     <a href="#lec14">14. Synthetic data</a>
                     <a href="#lec15">15. Privacy and data poisoning</a>
+                    <a href="#lec16">16. Data mixing + synthetic data</a>
+                    <a href="#lec17">17. Scaling + student presentations</a>
                 </div>
             </div>
             <a href="#project">Project</a>
@@ -174,20 +176,20 @@
                         <td><a href="https://nicholas.carlini.com/">Nicholas Carlini</a></td>
                         <td><a href="https://drive.google.com/file/d/1tHaW4E0NiCPF9p0f-hOs13EprxagxxRm/view?usp=drive_link">Slides</a></td>
                     </tr>
-                    <tr class="separator">
-                        <td colspan="4">Upcoming</td>
-                    </tr>
-                    <tr class="future">
+                    <tr data-href="#lec16">
                         <td>Mar 4 (W)</td>
                         <td>Data mixing + synthetic data</td>
                         <td><a href="https://mayeechen.github.io/">Mayee Chen</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
-                        <td></td>
+                        <td>Slides <a href="https://drive.google.com/file/d/1IM6gytc0bC00W_gQqMrre-deoXsKFD3z/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/1R3PtR9LJoIHfK5VJZKZMu8dbw_nyS_uK/view?usp=drive_link">2</a>, <a href="https://drive.google.com/file/d/1DsbBPWLJdULISyL1xHnWgpHpAYw9bCAi/view?usp=drive_link">3</a>, <a href="https://drive.google.com/file/d/12ySjF2bVa_o_HwG4QaWbnItghZ4F2jFX/view?usp=drive_link">4</a></td>
                     </tr>
-                    <tr class="future">
+                    <tr data-href="#lec17">
                         <td>Mar 9 (M)</td>
-                        <td>Legal aspects</td>
-                        <td><a href="https://www.linkedin.com/in/janel-thamkul/">Janel Thamkul</a></td>
-                        <td></td>
+                        <td>Scaling + student presentations</td>
+                        <td><a href="https://kothasuhas.github.io/">Suhas Kotha</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></td>
+                        <td>Slides <a href="https://drive.google.com/file/d/1QEVHOIh5AIzZkTsM31_78yQuqEyCUfW8/view?usp=drive_link">1</a>, <a href="https://drive.google.com/file/d/1DOsx7nmEzXq2EH5lD3crZOHUMWaLVBIf/view?usp=drive_link">2</a>, <a href="https://drive.google.com/file/d/1sIV5BRfZt97_AX8r9iBR0_irXDacc5oe/view?usp=drive_link">3</a></td>
+                    </tr>
+                    <tr class="separator">
+                        <td colspan="4">Upcoming</td>
                     </tr>
                     <tr class="future">
                         <td>Mar 11 (W)</td>
@@ -534,6 +536,51 @@ Nicholas gave a guest lecture on privacy and security aspects of training data. 
 - [Extracting Training Data from Diffusion Models](https://arxiv.org/abs/2301.13188)
 - [Extracting Training Data from Large Language Models](https://arxiv.org/abs/2012.07805)
 - [Scalable Extraction of Training Data from (Production) Language Models](https://arxiv.org/abs/2311.17035)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec16">
+                <h3>Lecture 16: Data mixing + synthetic data (Mar 4) <span class="lecture-links"><a href="https://mayeechen.github.io/">Mayee Chen</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></span></h3>
+                <div class="markdown">
+Mayee gave a guest lecture on dataset mixing ([slides](https://drive.google.com/file/d/1IM6gytc0bC00W_gQqMrre-deoXsKFD3z/view?usp=drive_link)), followed by student presentations on synthetic data.
+
+## Guest lecture
+
+**Dataset mixing** (Mayee Chen, [slides](https://drive.google.com/file/d/1IM6gytc0bC00W_gQqMrre-deoXsKFD3z/view?usp=drive_link)):
+- [OLMix: A Framework for Data Mixing Throughout LM Development](https://arxiv.org/abs/2602.12237)
+
+## Student presentations
+
+**Retrieval vs synthetic data in vision** (Bobby Shi, [slides](https://drive.google.com/file/d/1R3PtR9LJoIHfK5VJZKZMu8dbw_nyS_uK/view?usp=drive_link)):
+- [The Unmet Promise of Synthetic Training Images: Using Retrieved Real Images Performs Better](https://arxiv.org/abs/2406.05184)
+
+**Synthetic rewrites** (Thanawat Sornwanee, [slides](https://drive.google.com/file/d/1DsbBPWLJdULISyL1xHnWgpHpAYw9bCAi/view?usp=drive_link)):
+- [Rephrasing the Web: A Recipe for Compute and Data-Efficient Language Modeling](https://arxiv.org/abs/2401.16380)
+
+**Phi-4** (Seyone Chithrananda, [slides](https://drive.google.com/file/d/12ySjF2bVa_o_HwG4QaWbnItghZ4F2jFX/view?usp=drive_link)):
+- [Phi-4 Technical Report](https://arxiv.org/abs/2412.08905)
+
+                </div>
+            </div>
+
+            <div class="lecture" id="lec17">
+                <h3>Lecture 17: Scaling + student presentations (Mar 9) <span class="lecture-links"><a href="https://kothasuhas.github.io/">Suhas Kotha</a> + <a href="https://docs.google.com/spreadsheets/d/1HyCl8n562kg-SkiQV8lWlYSRBFCR18R_HaQT9QeW35c/edit?usp=sharing">Students</a></span></h3>
+                <div class="markdown">
+Suhas gave a guest lecture on scaling, followed by student presentations.
+
+## Guest lecture
+
+**Pre-training under infinite compute** (Suhas Kotha, [slides](https://drive.google.com/file/d/1QEVHOIh5AIzZkTsM31_78yQuqEyCUfW8/view?usp=drive_link)):
+- [Scaling Laws for Precision](https://arxiv.org/abs/2509.14786)
+
+## Student presentations
+
+**Shaping capabilities with token-level data filtering** (Andrew Lanpouthakoun, [slides](https://drive.google.com/file/d/1DOsx7nmEzXq2EH5lD3crZOHUMWaLVBIf/view?usp=drive_link)):
+- [Scaling Laws for Downstream Task Performance in Machine Translation](https://arxiv.org/abs/2601.21571)
+
+**Will we run out of data?** (Emily Steiner, [slides](https://drive.google.com/file/d/1sIV5BRfZt97_AX8r9iBR0_irXDacc5oe/view?usp=drive_link)):
+- [Will we run out of data? Limits of LLM Scaling Based on Human-Generated Data](https://arxiv.org/abs/2211.04325)
 
                 </div>
             </div>
